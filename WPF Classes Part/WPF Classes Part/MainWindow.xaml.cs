@@ -33,7 +33,7 @@ namespace WPF_Classes_Part
         {
 
             
-            List<EntryForm> submissions = new List<EntryForm>();
+            
 
 
             EntryForm form1 = new EntryForm();
