@@ -57,5 +57,13 @@ namespace Wpf_JSON_Rick_And_Morty
 
 
         }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            ResultObject selectedCharacter = (ResultObject)lstCharacter.SelectedItem;
+            string googleSearch = $"http://www.google.com/search?q={selectedCharacter.name} rick and morty";
+            wbCharacterInfo.Source = new System.Uri(googleSearch);
+
+        }
     }
 }
