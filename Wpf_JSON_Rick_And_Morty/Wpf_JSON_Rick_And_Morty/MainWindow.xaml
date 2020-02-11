@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lstCharacter" HorizontalAlignment="Left" Height="264" Margin="55,114,0,0" VerticalAlignment="Top" Width="376"/>
+        <ListBox x:Name="lstCharacter" HorizontalAlignment="Left" Height="264" Margin="55,114,0,0" VerticalAlignment="Top" Width="376" SelectionChanged="lstCharacter_SelectionChanged"/>
         <Label Content="Rick and Morty Characters" HorizontalAlignment="Left" Margin="164,31,0,0" VerticalAlignment="Top" FontFamily="Rosewood Std Regular" FontSize="36" Foreground="#FF7E751F">
             <Label.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

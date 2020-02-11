@@ -1,6 +1,9 @@
-﻿using System;
+﻿//Kailee Orr
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +26,36 @@ namespace Wpf_JSON_Rick_And_Morty
         public MainWindow()
         {
             InitializeComponent();
+
+            string apiURL = "https://rickandmortyapi.com/api/character/";
+            RickAndMortyAPIResult apiInfo;
+            using (var client = new HttpClient())
+            {
+                string json = client.GetStringAsync(apiURL).Result;
+
+                apiInfo = JsonConvert.DeserializeObject<RickAndMortyAPIResult>(json);
+
+            }
+
+            foreach (var character in apiInfo.results)
+            {
+                lstCharacter.Items.Add(character);
+
+            }
+            
+
+
+
+
+        }
+
+        private void lstCharacter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ResultObject selectedCharacter = (ResultObject)lstCharacter.SelectedItem;
+            imgCharacter.Source = new BitmapImage(new System.Uri(selectedCharacter.image));
+
+
+
         }
     }
 }
