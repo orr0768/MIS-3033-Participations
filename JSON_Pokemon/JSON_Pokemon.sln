@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_Pokemon", "JSON_Pokemon\JSON_Pokemon.csproj", "{25CE4601-0E16-4B6C-8478-3A6A18E8521E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25CE4601-0E16-4B6C-8478-3A6A18E8521E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25CE4601-0E16-4B6C-8478-3A6A18E8521E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25CE4601-0E16-4B6C-8478-3A6A18E8521E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25CE4601-0E16-4B6C-8478-3A6A18E8521E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40AEB06E-F0DD-45F6-92F8-3325CFEF648D}
+	EndGlobalSection
+EndGlobal
