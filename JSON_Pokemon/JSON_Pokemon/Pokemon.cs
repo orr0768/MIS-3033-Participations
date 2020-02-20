@@ -23,12 +23,22 @@ namespace JSON_Pokemon
     {
         public double weight { get; set; }
         public double height { get; set; }
-        public string front_default { get; set; }
-
+        public double id { get; set; }
+        public string name{ get; set; }
+        public Sprite sprites { get; set; }
+        
         public override string ToString()
         {
             return $"Weight: {weight}, Height: {height}";
         }
+
+        
+    }
+
+    public class Sprite
+    {
+        public string front_default { get; set; }
+        public string back_default { get; set; }
     }
 
     public class AllPokemonResult
@@ -36,8 +46,6 @@ namespace JSON_Pokemon
     {
         public string url { get; set; }
         public string name { get; set; }
-        public string image { get; set; }
-
         public override string ToString()
         {
             return name;
@@ -45,6 +53,8 @@ namespace JSON_Pokemon
     }
 
     
+
+
 
 
 }

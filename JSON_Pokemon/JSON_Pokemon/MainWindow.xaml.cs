@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace JSON_Pokemon
 {
     /// <summary>
@@ -27,7 +28,7 @@ namespace JSON_Pokemon
             InitializeComponent();
 
 
-            string path = "https://pokeapi.co/api/v2/pokemon";
+            string path = "https://pokeapi.co/api/v2/pokemon?offset=20&limit=1000";
             AllPokemonAPI PokemonAPI;
 
             using (var client = new HttpClient())
@@ -38,13 +39,15 @@ namespace JSON_Pokemon
 
             }
 
-            foreach (var pokie in PokemonAPI.results)
+            foreach (var pokemon in PokemonAPI.results)
             {
-                lstResults.Items.Add(pokie);
+                lstResults.Items.Add(pokemon);
 
             }
 
-            
+            btnBack.IsEnabled = false;
+            btnFront.IsEnabled = false;
+
 
 
         }
@@ -54,7 +57,7 @@ namespace JSON_Pokemon
         private void lstResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
 
         {
-            var selectedCharacterfromlist = (AllPokemonResult)lstResults.SelectedItem;
+            AllPokemonResult selectedCharacterfromlist = (AllPokemonResult)lstResults.SelectedItem;
 
             PokieInfo PokieAPI;
 
@@ -66,12 +69,25 @@ namespace JSON_Pokemon
 
             }
 
-            foreach (var pokie in PokieAPI.front_default)
-            {
-                lstSprites.Items.Add(pokie);
 
-            }
-            
+
+            imgPokemon.Source = new BitmapImage(new Uri(PokieAPI.sprites.front_default);
+            btnBack.IsEnabled = true;
+            btnFront.IsEnabled = true;
+
+
+
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            imgPokemon.Source = new BitmapImage(new Uri(PokieAPI.sprites.back_default));
+        }
+
+        private void BtnFront_Click(object sender, RoutedEventArgs e)
+        {
+            imgPokemon.Source = new BitmapImage(new Uri(PokieAPI.sprites.front_default));
         }
     }
 }
+

@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lstResults" HorizontalAlignment="Left" Height="283" Margin="10,103,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="lstResults_SelectionChanged"/>
-        <Image x:Name="imgPokemon" HorizontalAlignment="Left" Height="190" Margin="448,103,0,0" VerticalAlignment="Top" Width="251"/>
-        <ListBox x:Name="lstSprites" HorizontalAlignment="Left" Height="283" Margin="249,103,0,0" VerticalAlignment="Top" Width="256"/>
+        <ListBox x:Name="lstResults" HorizontalAlignment="Left" Height="283" Margin="10,26,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="lstResults_SelectionChanged"/>
+        <Image x:Name="imgPokemon" HorizontalAlignment="Left" Height="190" Margin="531,71,0,0" VerticalAlignment="Top" Width="251"/>
+        <ListBox x:Name="lstSprites" HorizontalAlignment="Left" Height="283" Margin="249,26,0,0" VerticalAlignment="Top" Width="256"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="397,355,0,0" VerticalAlignment="Top" Width="108" Height="54" Click="btnBack_Click"/>
+        <Button x:Name="btnFront" Content="Front" HorizontalAlignment="Left" Margin="589,355,0,0" VerticalAlignment="Top" Width="108" Height="54"/>
 
     </Grid>
 </Window>
