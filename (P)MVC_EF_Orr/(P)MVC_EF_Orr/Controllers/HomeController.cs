@@ -27,6 +27,10 @@ namespace _P_MVC_EF_Orr.Controllers
             return View();
         }
 
+        public ActionResult Students()
+        {
+            return View();
+        }
        
     }
 }
